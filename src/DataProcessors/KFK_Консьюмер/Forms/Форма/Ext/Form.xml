@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСлушатьСообщения" id="13">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СлушатьСообщения</CommandName>
+				<ExtendedTooltip name="ФормаСлушатьСообщенияРасширеннаяПодсказка" id="14"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="15">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="16"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="17">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<InputField name="Консьюмер" id="10">
+							<DataPath>Объект.Консьюмер</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="КонсьюмерКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="КонсьюмерРасширеннаяПодсказка" id="12"/>
+							<Events>
+								<Event name="OnChange">КонсьюмерПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Брокер" id="1">
+							<DataPath>Объект.Брокер</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="БрокерКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="БрокерРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="OnChange">БрокерПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="19">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="20"/>
+					<ChildItems>
+						<InputField name="Топик" id="4">
+							<DataPath>Объект.Топик</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>32</Width>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ChooseType>false</ChooseType>
+							<ContextMenu name="ТопикКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ТопикРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Партиция" id="7">
+							<DataPath>Объект.Партиция</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПартицияКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПартицияРасширеннаяПодсказка" id="9"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ПрочитанныеСообщения" id="21">
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ПрочитанныеСообщения</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПрочитанныеСообщенияКонтекстноеМеню" id="22"/>
+			<AutoCommandBar name="ПрочитанныеСообщенияКоманднаяПанель" id="23">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ПрочитанныеСообщенияСохранитьСообщение" id="64">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СохранитьСообщение</CommandName>
+						<ExtendedTooltip name="ПрочитанныеСообщенияСохранитьСообщениеРасширеннаяПодсказка" id="65"/>
+					</Button>
+					<Button name="ПрочитанныеСообщенияОчиститьПолученныеСообщения" id="66">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОчиститьПолученныеСообщения</CommandName>
+						<ExtendedTooltip name="ПрочитанныеСообщенияОчиститьПолученныеСообщенияРасширеннаяПодсказка" id="67"/>
+					</Button>
+					<SearchStringAddition name="Дополнение1" id="58">
+						<AdditionSource>
+							<Item>ПрочитанныеСообщения</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="Дополнение1КонтекстноеМеню" id="59"/>
+						<ExtendedTooltip name="Дополнение1РасширеннаяПодсказка" id="60"/>
+					</SearchStringAddition>
+					<SearchControlAddition name="Дополнение2" id="61">
+						<AdditionSource>
+							<Item>ПрочитанныеСообщения</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="Дополнение2КонтекстноеМеню" id="62"/>
+						<ExtendedTooltip name="Дополнение2РасширеннаяПодсказка" id="63"/>
+					</SearchControlAddition>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПрочитанныеСообщенияРасширеннаяПодсказка" id="24"/>
+			<SearchStringAddition name="ПрочитанныеСообщенияСтрокаПоиска" id="25">
+				<AdditionSource>
+					<Item>ПрочитанныеСообщения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПрочитанныеСообщенияСтрокаПоискаКонтекстноеМеню" id="26"/>
+				<ExtendedTooltip name="ПрочитанныеСообщенияСтрокаПоискаРасширеннаяПодсказка" id="27"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПрочитанныеСообщенияСостояниеПросмотра" id="28">
+				<AdditionSource>
+					<Item>ПрочитанныеСообщения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПрочитанныеСообщенияСостояниеПросмотраКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="ПрочитанныеСообщенияСостояниеПросмотраРасширеннаяПодсказка" id="30"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПрочитанныеСообщенияУправлениеПоиском" id="31">
+				<AdditionSource>
+					<Item>ПрочитанныеСообщения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПрочитанныеСообщенияУправлениеПоискомКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="ПрочитанныеСообщенияУправлениеПоискомРасширеннаяПодсказка" id="33"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПрочитанныеСообщенияНомерСтроки" id="34">
+					<DataPath>Объект.ПрочитанныеСообщения.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПрочитанныеСообщенияНомерСтрокиКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ПрочитанныеСообщенияНомерСтрокиРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<InputField name="ПрочитанныеСообщенияСообщение" id="37">
+					<DataPath>Объект.ПрочитанныеСообщения.Сообщение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПрочитанныеСообщенияСообщениеКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ПрочитанныеСообщенияСообщениеРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="ПрочитанныеСообщенияЗаголовки" id="40">
+					<DataPath>Объект.ПрочитанныеСообщения.Заголовки</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПрочитанныеСообщенияЗаголовкиКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ПрочитанныеСообщенияЗаголовкиРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="ПрочитанныеСообщенияКлюч" id="43">
+					<DataPath>Объект.ПрочитанныеСообщения.Ключ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПрочитанныеСообщенияКлючКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ПрочитанныеСообщенияКлючРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="ПрочитанныеСообщенияПартиция" id="46">
+					<DataPath>Объект.ПрочитанныеСообщения.Партиция</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПрочитанныеСообщенияПартицияКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ПрочитанныеСообщенияПартицияРасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<InputField name="ПрочитанныеСообщенияВременнаяМетка" id="49">
+					<DataPath>Объект.ПрочитанныеСообщения.ВременнаяМетка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПрочитанныеСообщенияВременнаяМеткаКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ПрочитанныеСообщенияВременнаяМеткаРасширеннаяПодсказка" id="51"/>
+				</InputField>
+				<InputField name="ПрочитанныеСообщенияСмещение" id="52">
+					<DataPath>Объект.ПрочитанныеСообщения.Смещение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПрочитанныеСообщенияСмещениеКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ПрочитанныеСообщенияСмещениеРасширеннаяПодсказка" id="54"/>
+				</InputField>
+				<InputField name="ПрочитанныеСообщенияСлужебнаяКолонка" id="55">
+					<DataPath>Объект.ПрочитанныеСообщения.СлужебнаяКолонка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПрочитанныеСообщенияСлужебнаяКолонкаКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ПрочитанныеСообщенияСлужебнаяКолонкаРасширеннаяПодсказка" id="57"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.KFK_Консьюмер</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.ПрочитанныеСообщения">
+					<Column name="СлужебнаяКолонка" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Служебная колонка</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>2</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекущийРежим" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий режим</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>14</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторГруппы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор группы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>128</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыПодключения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры подключения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ключ" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>128</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>256</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаймаутОжиданияСообщений" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймаут ожидания сообщений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресБрокера" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес брокера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КаталогЛогов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог логов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолучатьРезультатДвоичнымиДанными" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получать результат двоичными данными</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторВК" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор ВК</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>32</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СлушатьСообщения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Слушать сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Слушать сообщения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СлушатьСообщения</Action>
+		</Command>
+		<Command name="СохранитьСообщение" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить сообщение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить сообщение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьСообщение</Action>
+		</Command>
+		<Command name="ОчиститьПолученныеСообщения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить полученные сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить полученные сообщения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьПолученныеСообщения</Action>
+		</Command>
+	</Commands>
+</Form>

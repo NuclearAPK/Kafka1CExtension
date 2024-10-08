@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаОписание" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа описание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа описание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияОписание" id="3">
+					<TextColor>style:FieldSelectionBackColor</TextColor>
+					<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добро пожаловать в утилиту управления Simple Kafka!</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияОписаниеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДекорацияОписаниеРасширеннаяПодсказка" id="5"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ДекорацияРазделить" id="11">
+			<ContextMenu name="ДекорацияРазделитьКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ДекорацияРазделитьРасширеннаяПодсказка" id="13"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаКомпонента" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внешняя компонента</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>web:CadetBlue</TitleTextColor>
+			<TitleFont ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа компонента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаКомпонентаРасширеннаяПодсказка" id="7"/>
+			<ChildItems>
+				<LabelDecoration name="СсылкаВнешнейКомпоненты" id="8">
+					<TextColor>web:Navy</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание методов и примеры кода использования внешней компоненты, используемой в решении</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="СсылкаВнешнейКомпонентыКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="СсылкаВнешнейКомпонентыРасширеннаяПодсказка" id="10"/>
+					<Events>
+						<Event name="Click">СсылкаВнешнейКомпонентыНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ДекорацияРазделитель1" id="19">
+			<ContextMenu name="ДекорацияРазделитель1КонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ДекорацияРазделитель1РасширеннаяПодсказка" id="21"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаИспользуемыйИнструментарий" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используемые инструменты и фреймворки</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>web:CadetBlue</TitleTextColor>
+			<TitleFont ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа компонента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаИспользуемыйИнструментарийРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКонсольЗаданий" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа консоль заданий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа консоль заданий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Group>AlwaysHorizontal</Group>
+					<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКонсольЗаданийРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<PictureDecoration name="Декорация2" id="37">
+							<Width>4</Width>
+							<Hyperlink>true</Hyperlink>
+							<PictureSize>Proportionally</PictureSize>
+							<Picture>
+								<xr:Ref>CommonPicture.KFK_Github</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="39"/>
+							<Events>
+								<Event name="Click">Декорация2Нажатие</Event>
+							</Events>
+						</PictureDecoration>
+						<LabelDecoration name="Декорация1" id="34">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Консоль заданий (by kuzyara)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="36"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЭлементыБСП" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Элементы БСП (методы)</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>web:CadetBlue</TitleTextColor>
+					<TitleFont ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа элементы БСП</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЭлементыБСПРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<PictureDecoration name="Декорация4" id="45">
+							<Width>4</Width>
+							<Hyperlink>true</Hyperlink>
+							<PictureSize>Proportionally</PictureSize>
+							<Picture>
+								<xr:Abs>Picture.svg</xr:Abs>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="Декорация4КонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="47"/>
+							<Events>
+								<Event name="Click">Декорация4Нажатие</Event>
+							</Events>
+						</PictureDecoration>
+						<LabelDecoration name="Декорация3" id="42">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В решении заимствованы методы из общих модулей "Библитеки стандартных подсистем"</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация3КонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="44"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКоннекторХТТП" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа коннектор ХТТП</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа коннектор ХТТП</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Group>AlwaysHorizontal</Group>
+					<VerticalAlign>Center</VerticalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКоннекторХТТПРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<PictureDecoration name="Декорация5" id="53">
+							<Width>4</Width>
+							<Hyperlink>true</Hyperlink>
+							<PictureSize>Proportionally</PictureSize>
+							<Picture>
+								<xr:Ref>CommonPicture.KFK_Github</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="Декорация5КонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="55"/>
+							<Events>
+								<Event name="Click">Декорация5Нажатие</Event>
+							</Events>
+						</PictureDecoration>
+						<LabelDecoration name="Декорация6" id="56">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Коннектор: удобный HTTP-клиент для 1С:Предприятие 8</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация6КонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="58"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ДекорацияРазделитель2" id="29">
+			<ContextMenu name="ДекорацияРазделитель2КонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ДекорацияРазделитель2РасширеннаяПодсказка" id="31"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаОбратнаяСвязь" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обратная связь</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>web:CadetBlue</TitleTextColor>
+			<TitleFont ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа компонента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаОбратнаяСвязьРасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеОбратнойСвязи" id="16">
+					<TextColor>web:Navy</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приветствуются любая конструктивная связь как по работе расширения, так и внешней компоненте</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписаниеОбратнойСвязиКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ОписаниеОбратнойСвязиРасширеннаяПодсказка" id="18"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаИсточникиСвязи" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа источники связи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа источники связи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<HorizontalSpacing>OneAndHalf</HorizontalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИсточникиСвязиРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<PictureDecoration name="СсылкаTelegram" id="24">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ссылка telegram</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<Picture>
+								<xr:Ref>CommonPicture.KFK_Телеграм32х32</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="СсылкаTelegramКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="СсылкаTelegramРасширеннаяПодсказка" id="26"/>
+							<Events>
+								<Event name="Click">СсылкаTelegramНажатие</Event>
+							</Events>
+						</PictureDecoration>
+						<PictureDecoration name="СсылкаПочта" id="48">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ссылка почта</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<Picture>
+								<xr:Ref>CommonPicture.KFK_Email32x32</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="СсылкаПочтаКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="СсылкаПочтаРасширеннаяПодсказка" id="50"/>
+							<Events>
+								<Event name="Click">СсылкаПочтаНажатие</Event>
+							</Events>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.KFK_РабочийСтол</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+</Form>

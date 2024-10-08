@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<SubsystemsOrder>
+		<Subsystem>cad3d7b4-c7ca-4ba4-84f4-496c455c8615</Subsystem>
+		<Subsystem>3c4a3f9d-705e-45ca-96e6-a212f1ac7497</Subsystem>
+		<Subsystem>2150cd3c-6725-442d-9d4b-d6e3d5ead397</Subsystem>
+	</SubsystemsOrder>
+</CommandInterface>
