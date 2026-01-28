@@ -1,11 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаСлушатьСообщения" id="13">
 				<Type>CommandBarButton</Type>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.СлушатьСообщения</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
 				<ExtendedTooltip name="ФормаСлушатьСообщенияРасширеннаяПодсказка" id="14"/>
 			</Button>
 		</ChildItems>
@@ -40,6 +43,7 @@
 						<InputField name="Брокер" id="1">
 							<DataPath>Объект.Брокер</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 							<ContextMenu name="БрокерКонтекстноеМеню" id="2"/>
 							<ExtendedTooltip name="БрокерРасширеннаяПодсказка" id="3"/>
@@ -58,6 +62,7 @@
 						<InputField name="Топик" id="4">
 							<DataPath>Объект.Топик</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<Width>32</Width>
 							<ListChoiceMode>true</ListChoiceMode>
 							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
@@ -69,6 +74,7 @@
 							<DataPath>Объект.Партиция</DataPath>
 							<Visible>false</Visible>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 							<ContextMenu name="ПартицияКонтекстноеМеню" id="8"/>
 							<ExtendedTooltip name="ПартицияРасширеннаяПодсказка" id="9"/>
@@ -80,6 +86,8 @@
 		<Table name="ПрочитанныеСообщения" id="21">
 			<ChangeRowSet>false</ChangeRowSet>
 			<ChangeRowOrder>false</ChangeRowOrder>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>Объект.ПрочитанныеСообщения</DataPath>
@@ -100,16 +108,6 @@
 			<AutoCommandBar name="ПрочитанныеСообщенияКоманднаяПанель" id="23">
 				<Autofill>false</Autofill>
 				<ChildItems>
-					<Button name="ПрочитанныеСообщенияСохранитьСообщение" id="64">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.СохранитьСообщение</CommandName>
-						<ExtendedTooltip name="ПрочитанныеСообщенияСохранитьСообщениеРасширеннаяПодсказка" id="65"/>
-					</Button>
-					<Button name="ПрочитанныеСообщенияОчиститьПолученныеСообщения" id="66">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.ОчиститьПолученныеСообщения</CommandName>
-						<ExtendedTooltip name="ПрочитанныеСообщенияОчиститьПолученныеСообщенияРасширеннаяПодсказка" id="67"/>
-					</Button>
 					<SearchStringAddition name="Дополнение1" id="58">
 						<AdditionSource>
 							<Item>ПрочитанныеСообщения</Item>
@@ -157,12 +155,14 @@
 				<LabelField name="ПрочитанныеСообщенияНомерСтроки" id="34">
 					<DataPath>Объект.ПрочитанныеСообщения.LineNumber</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
 					<ContextMenu name="ПрочитанныеСообщенияНомерСтрокиКонтекстноеМеню" id="35"/>
 					<ExtendedTooltip name="ПрочитанныеСообщенияНомерСтрокиРасширеннаяПодсказка" id="36"/>
 				</LabelField>
 				<InputField name="ПрочитанныеСообщенияСообщение" id="37">
 					<DataPath>Объект.ПрочитанныеСообщения.Сообщение</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ПрочитанныеСообщенияСообщениеКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="ПрочитанныеСообщенияСообщениеРасширеннаяПодсказка" id="39"/>
@@ -171,6 +171,7 @@
 					<DataPath>Объект.ПрочитанныеСообщения.Заголовки</DataPath>
 					<Visible>false</Visible>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ПрочитанныеСообщенияЗаголовкиКонтекстноеМеню" id="41"/>
 					<ExtendedTooltip name="ПрочитанныеСообщенияЗаголовкиРасширеннаяПодсказка" id="42"/>
@@ -178,6 +179,7 @@
 				<InputField name="ПрочитанныеСообщенияКлюч" id="43">
 					<DataPath>Объект.ПрочитанныеСообщения.Ключ</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ПрочитанныеСообщенияКлючКонтекстноеМеню" id="44"/>
 					<ExtendedTooltip name="ПрочитанныеСообщенияКлючРасширеннаяПодсказка" id="45"/>
@@ -185,6 +187,7 @@
 				<InputField name="ПрочитанныеСообщенияПартиция" id="46">
 					<DataPath>Объект.ПрочитанныеСообщения.Партиция</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ПрочитанныеСообщенияПартицияКонтекстноеМеню" id="47"/>
 					<ExtendedTooltip name="ПрочитанныеСообщенияПартицияРасширеннаяПодсказка" id="48"/>
@@ -192,6 +195,7 @@
 				<InputField name="ПрочитанныеСообщенияВременнаяМетка" id="49">
 					<DataPath>Объект.ПрочитанныеСообщения.ВременнаяМетка</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ПрочитанныеСообщенияВременнаяМеткаКонтекстноеМеню" id="50"/>
 					<ExtendedTooltip name="ПрочитанныеСообщенияВременнаяМеткаРасширеннаяПодсказка" id="51"/>
@@ -199,6 +203,7 @@
 				<InputField name="ПрочитанныеСообщенияСмещение" id="52">
 					<DataPath>Объект.ПрочитанныеСообщения.Смещение</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ПрочитанныеСообщенияСмещениеКонтекстноеМеню" id="53"/>
 					<ExtendedTooltip name="ПрочитанныеСообщенияСмещениеРасширеннаяПодсказка" id="54"/>
@@ -207,6 +212,7 @@
 					<DataPath>Объект.ПрочитанныеСообщения.СлужебнаяКолонка</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ПрочитанныеСообщенияСлужебнаяКолонкаКонтекстноеМеню" id="56"/>
 					<ExtendedTooltip name="ПрочитанныеСообщенияСлужебнаяКолонкаРасширеннаяПодсказка" id="57"/>
@@ -401,40 +407,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СлушатьСообщения</Action>
-		</Command>
-		<Command name="СохранитьСообщение" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сохранить сообщение</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сохранить сообщение</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.Write</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>СохранитьСообщение</Action>
-		</Command>
-		<Command name="ОчиститьПолученныеСообщения" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Очистить полученные сообщения</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Очистить полученные сообщения</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ОчиститьПолученныеСообщения</Action>
 		</Command>
 	</Commands>
 </Form>

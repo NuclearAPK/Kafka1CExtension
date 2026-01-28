@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
@@ -18,6 +20,7 @@
 					<v8:content>Группа описание</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Group>HorizontalIfPossible</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="2"/>
@@ -55,6 +58,8 @@
 					<v8:content>Группа компонента</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Group>HorizontalIfPossible</Group>
+			<Representation>WeakSeparation</Representation>
 			<ExtendedTooltip name="ГруппаКомпонентаРасширеннаяПодсказка" id="7"/>
 			<ChildItems>
 				<LabelDecoration name="СсылкаВнешнейКомпоненты" id="8">
@@ -94,6 +99,7 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
+			<Representation>WeakSeparation</Representation>
 			<ThroughAlign>Use</ThroughAlign>
 			<ExtendedTooltip name="ГруппаИспользуемыйИнструментарийРасширеннаяПодсказка" id="28"/>
 			<ChildItems>
@@ -114,6 +120,7 @@
 					<Group>AlwaysHorizontal</Group>
 					<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
 					<VerticalAlign>Center</VerticalAlign>
+					<Representation>WeakSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаКонсольЗаданийРасширеннаяПодсказка" id="33"/>
 					<ChildItems>
@@ -122,7 +129,7 @@
 							<Hyperlink>true</Hyperlink>
 							<PictureSize>Proportionally</PictureSize>
 							<Picture>
-								<xr:Ref>CommonPicture.KFK_Github</xr:Ref>
+								<xr:Abs>Picture.png</xr:Abs>
 								<xr:LoadTransparent>false</xr:LoadTransparent>
 							</Picture>
 							<ContextMenu name="Декорация2КонтекстноеМеню" id="38"/>
@@ -161,6 +168,7 @@
 					<Group>AlwaysHorizontal</Group>
 					<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
 					<VerticalAlign>Center</VerticalAlign>
+					<Representation>WeakSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаЭлементыБСПРасширеннаяПодсказка" id="41"/>
 					<ChildItems>
@@ -190,52 +198,6 @@
 						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаКоннекторХТТП" id="51">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа коннектор ХТТП</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа коннектор ХТТП</v8:content>
-						</v8:item>
-					</ToolTip>
-					<GroupVerticalAlign>Center</GroupVerticalAlign>
-					<Group>AlwaysHorizontal</Group>
-					<VerticalAlign>Center</VerticalAlign>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаКоннекторХТТПРасширеннаяПодсказка" id="52"/>
-					<ChildItems>
-						<PictureDecoration name="Декорация5" id="53">
-							<Width>4</Width>
-							<Hyperlink>true</Hyperlink>
-							<PictureSize>Proportionally</PictureSize>
-							<Picture>
-								<xr:Ref>CommonPicture.KFK_Github</xr:Ref>
-								<xr:LoadTransparent>false</xr:LoadTransparent>
-							</Picture>
-							<ContextMenu name="Декорация5КонтекстноеМеню" id="54"/>
-							<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="55"/>
-							<Events>
-								<Event name="Click">Декорация5Нажатие</Event>
-							</Events>
-						</PictureDecoration>
-						<LabelDecoration name="Декорация6" id="56">
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Коннектор: удобный HTTP-клиент для 1С:Предприятие 8</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="Декорация6КонтекстноеМеню" id="57"/>
-							<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="58"/>
-						</LabelDecoration>
-					</ChildItems>
-				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<LabelDecoration name="ДекорацияРазделитель2" id="29">
@@ -258,6 +220,7 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
+			<Representation>WeakSeparation</Representation>
 			<ExtendedTooltip name="ГруппаОбратнаяСвязьРасширеннаяПодсказка" id="15"/>
 			<ChildItems>
 				<LabelDecoration name="ОписаниеОбратнойСвязи" id="16">

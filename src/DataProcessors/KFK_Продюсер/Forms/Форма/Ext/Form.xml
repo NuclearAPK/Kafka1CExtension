@@ -1,11 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаОпубликовать" id="16">
 				<Type>CommandBarButton</Type>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.Опубликовать</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
 				<ExtendedTooltip name="ФормаОпубликоватьРасширеннаяПодсказка" id="17"/>
 			</Button>
 		</ChildItems>
@@ -31,7 +34,6 @@
 			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ThroughAlign>Use</ThroughAlign>
 			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="95"/>
 			<ChildItems>
 				<UsualGroup name="ГруппаЛево" id="96">
@@ -99,6 +101,8 @@
 													<v8:content>Группа конкретный продюсер</v8:content>
 												</v8:item>
 											</ToolTip>
+											<Group>Vertical</Group>
+											<ScrollOnCompress>false</ScrollOnCompress>
 											<ExtendedTooltip name="ГруппаКонкретныйПродюсерРасширеннаяПодсказка" id="82"/>
 											<ChildItems>
 												<InputField name="Продюсер" id="18">
@@ -122,6 +126,8 @@
 													<v8:content>Группа произвольный продюсер</v8:content>
 												</v8:item>
 											</ToolTip>
+											<Group>Vertical</Group>
+											<ScrollOnCompress>false</ScrollOnCompress>
 											<ExtendedTooltip name="ГруппаПроизвольныйПродюсерРасширеннаяПодсказка" id="84"/>
 											<ChildItems>
 												<InputField name="Брокер" id="91">
@@ -164,6 +170,7 @@
 											<v8:content>Группа партиция ключ</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Group>HorizontalIfPossible</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаПартицияКлючРасширеннаяПодсказка" id="101"/>
@@ -177,7 +184,6 @@
 										</InputField>
 										<CheckBoxField name="ГенерироватьПроизвольныйКлюч" id="102">
 											<DataPath>Объект.ГенерироватьПроизвольныйКлюч</DataPath>
-											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="ГенерироватьПроизвольныйКлючКонтекстноеМеню" id="103"/>
 											<ExtendedTooltip name="ГенерироватьПроизвольныйКлючРасширеннаяПодсказка" id="104"/>
 											<Events>
@@ -363,6 +369,7 @@
 						<RadioButtonField name="ВидДанных" id="1">
 							<DataPath>Объект.ВидДанных</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<RadioButtonType>Tumbler</RadioButtonType>
 							<ChoiceList>
 								<xr:Item>
@@ -411,45 +418,6 @@
 							<ContextMenu name="КоличествоСообщенийКонтекстноеМеню" id="109"/>
 							<ExtendedTooltip name="КоличествоСообщенийРасширеннаяПодсказка" id="110"/>
 						</InputField>
-						<UsualGroup name="AVRO" id="111">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>AVRO</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>AVRO</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Vertical</Group>
-							<ExtendedTooltip name="AVROРасширеннаяПодсказка" id="112"/>
-							<ChildItems>
-								<InputField name="Субъект" id="113">
-									<DataPath>Субъект</DataPath>
-									<ListChoiceMode>true</ListChoiceMode>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="СубъектКонтекстноеМеню" id="114"/>
-									<ExtendedTooltip name="СубъектРасширеннаяПодсказка" id="115"/>
-									<Events>
-										<Event name="OnChange">СубъектПриИзменении</Event>
-									</Events>
-								</InputField>
-								<InputField name="ВерсияСхемы" id="116">
-									<DataPath>ВерсияСхемы</DataPath>
-									<ListChoiceMode>true</ListChoiceMode>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ChooseType>false</ChooseType>
-									<ContextMenu name="ВерсияСхемыКонтекстноеМеню" id="117"/>
-									<ExtendedTooltip name="ВерсияСхемыРасширеннаяПодсказка" id="118"/>
-									<Events>
-										<Event name="OnChange">ВерсияСхемыПриИзменении</Event>
-									</Events>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -467,11 +435,15 @@
 					<v8:content>Группа заголовки</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Group>HorizontalIfPossible</Group>
 			<Behavior>PopUp</Behavior>
+			<Representation>WeakSeparation</Representation>
 			<TitleDataPath>Объект.Заголовки.RowsCount</TitleDataPath>
 			<ExtendedTooltip name="ГруппаЗаголовкиРасширеннаяПодсказка" id="52"/>
 			<ChildItems>
 				<Table name="Заголовки" id="29">
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
@@ -508,12 +480,14 @@
 						<LabelField name="ЗаголовкиНомерСтроки" id="42">
 							<DataPath>Объект.Заголовки.LineNumber</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="ЗаголовкиНомерСтрокиКонтекстноеМеню" id="43"/>
 							<ExtendedTooltip name="ЗаголовкиНомерСтрокиРасширеннаяПодсказка" id="44"/>
 						</LabelField>
 						<InputField name="ЗаголовкиКлюч" id="45">
 							<DataPath>Объект.Заголовки.Ключ</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 							<ContextMenu name="ЗаголовкиКлючКонтекстноеМеню" id="46"/>
 							<ExtendedTooltip name="ЗаголовкиКлючРасширеннаяПодсказка" id="47"/>
@@ -521,6 +495,7 @@
 						<InputField name="ЗаголовкиЗначение" id="48">
 							<DataPath>Объект.Заголовки.Значение</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 							<ContextMenu name="ЗаголовкиЗначениеКонтекстноеМеню" id="49"/>
 							<ExtendedTooltip name="ЗаголовкиЗначениеРасширеннаяПодсказка" id="50"/>
@@ -558,6 +533,8 @@
 							<v8:content>Группа двоичные данные</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
 					<ExtendedTooltip name="ГруппаДвоичныеДанныеРасширеннаяПодсказка" id="7"/>
 					<ChildItems>
 						<LabelDecoration name="ВыбратьФайлы" id="56">
@@ -589,6 +566,8 @@
 							<v8:content>Группа строка</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
 					<ExtendedTooltip name="ГруппаСтрокаРасширеннаяПодсказка" id="9"/>
 					<ChildItems>
 						<RadioButtonField name="ВидСтроковыхДанных" id="76">
@@ -657,6 +636,8 @@
 											<v8:content>Группа произвольная строка</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Group>Vertical</Group>
+									<ScrollOnCompress>false</ScrollOnCompress>
 									<ExtendedTooltip name="ГруппаПроизвольнаяСтрокаРасширеннаяПодсказка" id="70"/>
 									<ChildItems>
 										<InputField name="ПроизвольныеДанныеСтрокой" id="13">
@@ -684,6 +665,8 @@
 											<v8:content>Группа JSON</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Group>Vertical</Group>
+									<ScrollOnCompress>false</ScrollOnCompress>
 									<ExtendedTooltip name="ГруппаJSONРасширеннаяПодсказка" id="72"/>
 									<ChildItems>
 										<HTMLDocumentField name="JSONHTML" id="73">
@@ -784,112 +767,6 @@
 				</v8:NumberQualifiers>
 			</Type>
 			<FillCheck>ShowError</FillCheck>
-		</Attribute>
-		<Attribute name="АдресРеестраСхем" id="7">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Адрес реестра схем</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>256</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="Субъект" id="8">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Субъект</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>128</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="ВерсияСхемы" id="9">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Версия схемы</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>10</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="Пользователь" id="10">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Пользователь</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>64</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="Пароль" id="11">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Пароль</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>64</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="СхемаAVRO" id="12">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Схема AVRO</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="ИмяСхемы" id="13">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Имя схемы</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>64</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

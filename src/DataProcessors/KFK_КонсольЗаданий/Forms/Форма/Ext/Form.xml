@@ -1,16 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
 			<v8:content>Консоль заданий</v8:content>
 		</v8:item>
 	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
 	<CommandBarLocation>None</CommandBarLocation>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<ScalingMode>Compact</ScalingMode>
+	<ShowCommandBar>false</ShowCommandBar>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
@@ -33,12 +36,15 @@
 			</ToolTip>
 			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
 			<ExtendedTooltip name="РегламентныеЗаданияРасширеннаяПодсказка" id="57"/>
 			<ChildItems>
 				<Table name="СписокРегламентныхЗаданий" id="2">
 					<Representation>List</Representation>
 					<SkipOnInput>false</SkipOnInput>
 					<Width>2</Width>
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 					<SearchOnInput>Use</SearchOnInput>
 					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>СписокРегламентныхЗаданий</DataPath>
@@ -400,11 +406,14 @@
 			</ToolTip>
 			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
 			<ExtendedTooltip name="ФоновыеЗаданияРасширеннаяПодсказка" id="83"/>
 			<ChildItems>
 				<Table name="СписокФоновыхЗаданий" id="24">
 					<Representation>List</Representation>
 					<SkipOnInput>false</SkipOnInput>
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>СписокФоновыхЗаданий</DataPath>
@@ -608,60 +617,70 @@
 								</v8:item>
 							</ToolTip>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="СписокФоновыхЗаданийРегламентноеКонтекстноеМеню" id="28"/>
 							<ExtendedTooltip name="СписокФоновыхЗаданийРегламентноеРасширеннаяПодсказка" id="100"/>
 						</InputField>
 						<InputField name="СписокФоновыхЗаданийНаименование" id="29">
 							<DataPath>СписокФоновыхЗаданий.Наименование</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="СписокФоновыхЗаданийНаименованиеКонтекстноеМеню" id="30"/>
 							<ExtendedTooltip name="СписокФоновыхЗаданийНаименованиеРасширеннаяПодсказка" id="101"/>
 						</InputField>
 						<InputField name="СписокФоновыхЗаданийКлюч" id="31">
 							<DataPath>СписокФоновыхЗаданий.Ключ</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="СписокФоновыхЗаданийКлючКонтекстноеМеню" id="32"/>
 							<ExtendedTooltip name="СписокФоновыхЗаданийКлючРасширеннаяПодсказка" id="102"/>
 						</InputField>
 						<InputField name="СписокФоновыхЗаданийМетод" id="33">
 							<DataPath>СписокФоновыхЗаданий.Метод</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="СписокФоновыхЗаданийМетодКонтекстноеМеню" id="34"/>
 							<ExtendedTooltip name="СписокФоновыхЗаданийМетодРасширеннаяПодсказка" id="103"/>
 						</InputField>
 						<InputField name="СписокФоновыхЗаданийСостояние" id="35">
 							<DataPath>СписокФоновыхЗаданий.Состояние</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="СписокФоновыхЗаданийСостояниеКонтекстноеМеню" id="36"/>
 							<ExtendedTooltip name="СписокФоновыхЗаданийСостояниеРасширеннаяПодсказка" id="104"/>
 						</InputField>
 						<InputField name="СписокФоновыхЗаданийНачало" id="37">
 							<DataPath>СписокФоновыхЗаданий.Начало</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="СписокФоновыхЗаданийНачалоКонтекстноеМеню" id="38"/>
 							<ExtendedTooltip name="СписокФоновыхЗаданийНачалоРасширеннаяПодсказка" id="105"/>
 						</InputField>
 						<InputField name="СписокФоновыхЗаданийКонец" id="39">
 							<DataPath>СписокФоновыхЗаданий.Конец</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="СписокФоновыхЗаданийКонецКонтекстноеМеню" id="40"/>
 							<ExtendedTooltip name="СписокФоновыхЗаданийКонецРасширеннаяПодсказка" id="106"/>
 						</InputField>
 						<InputField name="СписокФоновыхЗаданийСервер" id="41">
 							<DataPath>СписокФоновыхЗаданий.Сервер</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="СписокФоновыхЗаданийСерверКонтекстноеМеню" id="42"/>
 							<ExtendedTooltip name="СписокФоновыхЗаданийСерверРасширеннаяПодсказка" id="107"/>
 						</InputField>
 						<InputField name="СписокФоновыхЗаданийОшибки" id="43">
 							<DataPath>СписокФоновыхЗаданий.Ошибки</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="СписокФоновыхЗаданийОшибкиКонтекстноеМеню" id="44"/>
 							<ExtendedTooltip name="СписокФоновыхЗаданийОшибкиРасширеннаяПодсказка" id="108"/>
 						</InputField>
 						<InputField name="СписокФоновыхЗаданийСообщения" id="113">
 							<DataPath>СписокФоновыхЗаданий.Сообщения</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="СписокФоновыхЗаданийСообщенияКонтекстноеМеню" id="114"/>
 							<ExtendedTooltip name="СписокФоновыхЗаданийСообщенияРасширеннаяПодсказка" id="115"/>
 						</InputField>
@@ -671,6 +690,7 @@
 								<xr:Common>false</xr:Common>
 							</UserVisible>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="СписокФоновыхЗаданийИдентификаторКонтекстноеМеню" id="117"/>
 							<ExtendedTooltip name="СписокФоновыхЗаданийИдентификаторРасширеннаяПодсказка" id="118"/>
 						</LabelField>

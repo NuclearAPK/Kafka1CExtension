@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
-	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<InputField name="Наименование" id="1">
 			<DataPath>Объект.Description</DataPath>
 			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
 			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
@@ -18,6 +19,7 @@
 		<InputField name="КаталогЛогов" id="4">
 			<DataPath>Объект.КаталогЛогов</DataPath>
 			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
 			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ContextMenu name="КаталогЛоговКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="КаталогЛоговРасширеннаяПодсказка" id="6"/>
@@ -25,12 +27,9 @@
 		<CheckBoxField name="Синхронно" id="7">
 			<DataPath>Объект.Синхронно</DataPath>
 			<EditMode>EnterOnInput</EditMode>
-			<CheckBoxType>Auto</CheckBoxType>
+			<AutoEditMode>true</AutoEditMode>
 			<ContextMenu name="СинхронноКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="СинхронноРасширеннаяПодсказка" id="9"/>
-			<Events>
-				<Event name="OnChange">СинхронноПриИзменении</Event>
-			</Events>
 		</CheckBoxField>
 		<Pages name="Страницы" id="10">
 			<Title>
@@ -48,10 +47,14 @@
 							<v8:content>Параметры продюсера</v8:content>
 						</v8:item>
 					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
 					<ExtendedTooltip name="ГруппаПараметрыПродюсераРасширеннаяПодсказка" id="13"/>
 					<ChildItems>
 						<Table name="ПараметрыПродюсера" id="14">
 							<Representation>List</Representation>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -88,12 +91,14 @@
 								<LabelField name="ПараметрыПродюсераНомерСтроки" id="27">
 									<DataPath>Объект.ПараметрыПродюсера.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ContextMenu name="ПараметрыПродюсераНомерСтрокиКонтекстноеМеню" id="28"/>
 									<ExtendedTooltip name="ПараметрыПродюсераНомерСтрокиРасширеннаяПодсказка" id="29"/>
 								</LabelField>
 								<InputField name="ПараметрыПродюсераКлюч" id="30">
 									<DataPath>Объект.ПараметрыПродюсера.Ключ</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="ПараметрыПродюсераКлючКонтекстноеМеню" id="31"/>
 									<ExtendedTooltip name="ПараметрыПродюсераКлючРасширеннаяПодсказка" id="32"/>
@@ -101,6 +106,7 @@
 								<InputField name="ПараметрыПродюсераЗначение" id="33">
 									<DataPath>Объект.ПараметрыПродюсера.Значение</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="ПараметрыПродюсераЗначениеКонтекстноеМеню" id="34"/>
 									<ExtendedTooltip name="ПараметрыПродюсераЗначениеРасширеннаяПодсказка" id="35"/>
@@ -116,10 +122,14 @@
 							<v8:content>Топики</v8:content>
 						</v8:item>
 					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
 					<ExtendedTooltip name="ГруппаТопикиРасширеннаяПодсказка" id="37"/>
 					<ChildItems>
 						<Table name="Топики" id="38">
 							<Representation>List</Representation>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -156,12 +166,14 @@
 								<LabelField name="ТопикиНомерСтроки" id="51">
 									<DataPath>Объект.Топики.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ContextMenu name="ТопикиНомерСтрокиКонтекстноеМеню" id="52"/>
 									<ExtendedTooltip name="ТопикиНомерСтрокиРасширеннаяПодсказка" id="53"/>
 								</LabelField>
 								<InputField name="ТопикиБрокер" id="54">
 									<DataPath>Объект.Топики.Брокер</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="ТопикиБрокерКонтекстноеМеню" id="55"/>
 									<ExtendedTooltip name="ТопикиБрокерРасширеннаяПодсказка" id="56"/>
@@ -172,6 +184,7 @@
 								<InputField name="ТопикиТопик" id="57">
 									<DataPath>Объект.Топики.Топик</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ListChoiceMode>true</ListChoiceMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="ТопикиТопикКонтекстноеМеню" id="58"/>
@@ -181,6 +194,7 @@
 									<DataPath>Объект.Топики.СлужебнаяКолонка</DataPath>
 									<TitleLocation>None</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="ТопикиСлужебнаяКолонкаКонтекстноеМеню" id="61"/>
 									<ExtendedTooltip name="ТопикиСлужебнаяКолонкаРасширеннаяПодсказка" id="62"/>

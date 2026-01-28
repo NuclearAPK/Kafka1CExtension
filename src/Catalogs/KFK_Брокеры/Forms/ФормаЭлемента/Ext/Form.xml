@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
-	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
 	<ConversationsRepresentation>DontShow</ConversationsRepresentation>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
@@ -56,6 +57,7 @@
 		<InputField name="Наименование" id="1">
 			<DataPath>Объект.Description</DataPath>
 			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
 			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<InputHint>
 				<v8:item>
@@ -117,9 +119,12 @@
 						</v8:item>
 					</ToolTip>
 					<Group>HorizontalIfPossible</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
 					<ExtendedTooltip name="ГруппаПараметрыПодключенияРасширеннаяПодсказка" id="34"/>
 					<ChildItems>
 						<Table name="ПараметрыПодключения" id="35">
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -133,6 +138,11 @@
 										<CommandName>Form.Command.ЗагрузитьНастройкиИзФайла</CommandName>
 										<ToolTipRepresentation>Balloon</ToolTipRepresentation>
 										<ExtendedTooltip name="ПараметрыПодключенияЗагрузитьНастройкиИзФайлаРасширеннаяПодсказка" id="68"/>
+									</Button>
+									<Button name="ПараметрыПодключенияСохранитьНастройкиВФайл" id="93">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СохранитьНастройкиВФайл</CommandName>
+										<ExtendedTooltip name="ПараметрыПодключенияСохранитьНастройкиВФайлРасширеннаяПодсказка" id="94"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
@@ -165,12 +175,14 @@
 								<LabelField name="ПараметрыПодключенияНомерСтроки" id="48">
 									<DataPath>Объект.ПараметрыПодключения.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ContextMenu name="ПараметрыПодключенияНомерСтрокиКонтекстноеМеню" id="49"/>
 									<ExtendedTooltip name="ПараметрыПодключенияНомерСтрокиРасширеннаяПодсказка" id="50"/>
 								</LabelField>
 								<InputField name="ПараметрыПодключенияКлюч" id="51">
 									<DataPath>Объект.ПараметрыПодключения.Ключ</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="ПараметрыПодключенияКлючКонтекстноеМеню" id="52"/>
 									<ExtendedTooltip name="ПараметрыПодключенияКлючРасширеннаяПодсказка" id="53"/>
@@ -178,6 +190,7 @@
 								<InputField name="ПараметрыПодключенияЗначение" id="54">
 									<DataPath>Объект.ПараметрыПодключения.Значение</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="ПараметрыПодключенияЗначениеКонтекстноеМеню" id="55"/>
 									<ExtendedTooltip name="ПараметрыПодключенияЗначениеРасширеннаяПодсказка" id="56"/>
@@ -199,11 +212,15 @@
 							<v8:content>Группа топики</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
 					<ExtendedTooltip name="ГруппаТопикиРасширеннаяПодсказка" id="60"/>
 					<ChildItems>
 						<Table name="ТопикиБрокера" id="9">
 							<Representation>List</Representation>
 							<ReadOnly>true</ReadOnly>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -259,6 +276,7 @@
 								<InputField name="ТопикиБрокераТопик" id="22">
 									<DataPath>ТопикиБрокера.Топик</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="ТопикиБрокераТопикКонтекстноеМеню" id="23"/>
 									<ExtendedTooltip name="ТопикиБрокераТопикРасширеннаяПодсказка" id="24"/>
@@ -272,6 +290,7 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="ТопикиБрокераКоличествоПартицийКонтекстноеМеню" id="31"/>
 									<ExtendedTooltip name="ТопикиБрокераКоличествоПартицийРасширеннаяПодсказка" id="32"/>
@@ -292,7 +311,7 @@
 										</v8:item>
 									</ToolTip>
 									<EditMode>EnterOnInput</EditMode>
-									<CheckBoxType>Auto</CheckBoxType>
+									<AutoEditMode>true</AutoEditMode>
 									<ContextMenu name="ТопикиБрокераПрисутствуетВБазеКонтекстноеМеню" id="26"/>
 									<ExtendedTooltip name="ТопикиБрокераПрисутствуетВБазеРасширеннаяПодсказка" id="27"/>
 								</CheckBoxField>
@@ -438,6 +457,25 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ЗагрузитьНастройкиИзФайла</Action>
+		</Command>
+		<Command name="СохранитьНастройкиВФайл" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки в файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьНастройкиВФайл</Action>
 		</Command>
 	</Commands>
 </Form>
